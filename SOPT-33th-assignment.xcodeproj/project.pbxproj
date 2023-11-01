@@ -7,31 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED5FF68C2AE19C0A00DE3B12 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED5FF6872AE19C0900DE3B12 /* SF-Pro-Display-Light.otf */; };
+		ED5FF68E2AE19C0A00DE3B12 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED5FF6892AE19C0A00DE3B12 /* SF-Pro-Display-Regular.otf */; };
+		ED5FF68F2AE19C0A00DE3B12 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED5FF68A2AE19C0A00DE3B12 /* SF-Pro-Display-Medium.otf */; };
+		ED5FF6902AE19C0A00DE3B12 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED5FF68B2AE19C0A00DE3B12 /* SF-Pro-Display-Bold.otf */; };
+		ED5FF6912AE1A9E000DE3B12 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED5FF6882AE19C0A00DE3B12 /* SF-Pro-Display-Thin.otf */; };
+		ED5FF6CF2AE8080B00DE3B12 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FF6CE2AE8080B00DE3B12 /* FirstViewController.swift */; };
+		ED5FF6D12AE82CB100DE3B12 /* ListImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FF6D02AE82CB100DE3B12 /* ListImageView.swift */; };
+		ED5FF6D32AEAC2E300DE3B12 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FF6D22AEAC2E300DE3B12 /* WeatherView.swift */; };
 		EDAD4A232ADFBFED000FDFDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAD4A222ADFBFED000FDFDA /* AppDelegate.swift */; };
 		EDAD4A252ADFBFED000FDFDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAD4A242ADFBFED000FDFDA /* SceneDelegate.swift */; };
-		EDAD4A272ADFBFED000FDFDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAD4A262ADFBFED000FDFDA /* ViewController.swift */; };
+		EDAD4A272ADFBFED000FDFDA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAD4A262ADFBFED000FDFDA /* DetailViewController.swift */; };
 		EDAD4A2C2ADFBFEE000FDFDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDAD4A2B2ADFBFEE000FDFDA /* Assets.xcassets */; };
 		EDAD4A2F2ADFBFEE000FDFDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAD4A2D2ADFBFEE000FDFDA /* LaunchScreen.storyboard */; };
-		EDAD4A3C2AE17557000FDFDA /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDAD4A372AE17557000FDFDA /* SF-Pro-Text-Light.otf */; };
-		EDAD4A3D2AE17557000FDFDA /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDAD4A382AE17557000FDFDA /* SF-Pro-Text-Regular.otf */; };
-		EDAD4A3E2AE17557000FDFDA /* SF-Pro-Text-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDAD4A392AE17557000FDFDA /* SF-Pro-Text-Thin.otf */; };
-		EDAD4A3F2AE17557000FDFDA /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDAD4A3A2AE17557000FDFDA /* SF-Pro-Text-Medium.otf */; };
-		EDAD4A402AE17557000FDFDA /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDAD4A3B2AE17557000FDFDA /* SF-Pro-Text-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED5FF6872AE19C0900DE3B12 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Light.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		ED5FF6882AE19C0A00DE3B12 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Thin.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
+		ED5FF6892AE19C0A00DE3B12 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		ED5FF68A2AE19C0A00DE3B12 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Medium.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		ED5FF68B2AE19C0A00DE3B12 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		ED5FF6CE2AE8080B00DE3B12 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		ED5FF6D02AE82CB100DE3B12 /* ListImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImageView.swift; sourceTree = "<group>"; };
+		ED5FF6D22AEAC2E300DE3B12 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		EDAD4A1F2ADFBFED000FDFDA /* SOPT-33th-assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-33th-assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAD4A222ADFBFED000FDFDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDAD4A242ADFBFED000FDFDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDAD4A262ADFBFED000FDFDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDAD4A262ADFBFED000FDFDA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EDAD4A2B2ADFBFEE000FDFDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDAD4A2E2ADFBFEE000FDFDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDAD4A302ADFBFEE000FDFDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDAD4A372AE17557000FDFDA /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
-		EDAD4A382AE17557000FDFDA /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
-		EDAD4A392AE17557000FDFDA /* SF-Pro-Text-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Thin.otf"; sourceTree = "<group>"; };
-		EDAD4A3A2AE17557000FDFDA /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
-		EDAD4A3B2AE17557000FDFDA /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +73,13 @@
 				EDAD4A362AE174C0000FDFDA /* Fonts */,
 				EDAD4A222ADFBFED000FDFDA /* AppDelegate.swift */,
 				EDAD4A242ADFBFED000FDFDA /* SceneDelegate.swift */,
-				EDAD4A262ADFBFED000FDFDA /* ViewController.swift */,
+				EDAD4A262ADFBFED000FDFDA /* DetailViewController.swift */,
 				EDAD4A2B2ADFBFEE000FDFDA /* Assets.xcassets */,
 				EDAD4A2D2ADFBFEE000FDFDA /* LaunchScreen.storyboard */,
 				EDAD4A302ADFBFEE000FDFDA /* Info.plist */,
+				ED5FF6CE2AE8080B00DE3B12 /* FirstViewController.swift */,
+				ED5FF6D02AE82CB100DE3B12 /* ListImageView.swift */,
+				ED5FF6D22AEAC2E300DE3B12 /* WeatherView.swift */,
 			);
 			path = "SOPT-33th-assignment";
 			sourceTree = "<group>";
@@ -78,11 +87,11 @@
 		EDAD4A362AE174C0000FDFDA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				EDAD4A3B2AE17557000FDFDA /* SF-Pro-Text-Bold.otf */,
-				EDAD4A372AE17557000FDFDA /* SF-Pro-Text-Light.otf */,
-				EDAD4A3A2AE17557000FDFDA /* SF-Pro-Text-Medium.otf */,
-				EDAD4A382AE17557000FDFDA /* SF-Pro-Text-Regular.otf */,
-				EDAD4A392AE17557000FDFDA /* SF-Pro-Text-Thin.otf */,
+				ED5FF68B2AE19C0A00DE3B12 /* SF-Pro-Display-Bold.otf */,
+				ED5FF6872AE19C0900DE3B12 /* SF-Pro-Display-Light.otf */,
+				ED5FF68A2AE19C0A00DE3B12 /* SF-Pro-Display-Medium.otf */,
+				ED5FF6892AE19C0A00DE3B12 /* SF-Pro-Display-Regular.otf */,
+				ED5FF6882AE19C0A00DE3B12 /* SF-Pro-Display-Thin.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -145,13 +154,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5FF6912AE1A9E000DE3B12 /* SF-Pro-Display-Thin.otf in Resources */,
+				ED5FF68F2AE19C0A00DE3B12 /* SF-Pro-Display-Medium.otf in Resources */,
 				EDAD4A2F2ADFBFEE000FDFDA /* LaunchScreen.storyboard in Resources */,
-				EDAD4A402AE17557000FDFDA /* SF-Pro-Text-Bold.otf in Resources */,
-				EDAD4A3E2AE17557000FDFDA /* SF-Pro-Text-Thin.otf in Resources */,
-				EDAD4A3F2AE17557000FDFDA /* SF-Pro-Text-Medium.otf in Resources */,
+				ED5FF68C2AE19C0A00DE3B12 /* SF-Pro-Display-Light.otf in Resources */,
+				ED5FF6902AE19C0A00DE3B12 /* SF-Pro-Display-Bold.otf in Resources */,
+				ED5FF68E2AE19C0A00DE3B12 /* SF-Pro-Display-Regular.otf in Resources */,
 				EDAD4A2C2ADFBFEE000FDFDA /* Assets.xcassets in Resources */,
-				EDAD4A3D2AE17557000FDFDA /* SF-Pro-Text-Regular.otf in Resources */,
-				EDAD4A3C2AE17557000FDFDA /* SF-Pro-Text-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDAD4A272ADFBFED000FDFDA /* ViewController.swift in Sources */,
+				EDAD4A272ADFBFED000FDFDA /* DetailViewController.swift in Sources */,
+				ED5FF6D12AE82CB100DE3B12 /* ListImageView.swift in Sources */,
 				EDAD4A232ADFBFED000FDFDA /* AppDelegate.swift in Sources */,
+				ED5FF6D32AEAC2E300DE3B12 /* WeatherView.swift in Sources */,
 				EDAD4A252ADFBFED000FDFDA /* SceneDelegate.swift in Sources */,
+				ED5FF6CF2AE8080B00DE3B12 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
