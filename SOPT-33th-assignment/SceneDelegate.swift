@@ -18,9 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         let rootViewController = FirstViewController() // FirstViewController를 생성
+        
+        //let rootViewController = DetailViewController()
         let navigationController = UINavigationController(rootViewController: rootViewController) // 네비게이션 컨트롤러에 FirstViewController를 루트 뷰 컨트롤러로 설정
         
         window.rootViewController = navigationController // 네비게이션 컨트롤러를 루트 뷰 컨트롤러로 설정
+        
+        
         window.makeKeyAndVisible()
         self.window = window
     }
