@@ -37,6 +37,22 @@ struct WeatherInfoListCollectionData{
     }
 }
 
+struct ItemListData{
+    var dayLabel: String
+    var image: String
+    var minLabel:String
+    var rangeImage: String
+    var maxLabel:String
+    
+    init(dayLabel: String, image: String, minLabel: String, rangeImage: String, maxLabel: String) {
+        self.dayLabel = dayLabel
+        self.image = image
+        self.minLabel = minLabel
+        self.rangeImage = rangeImage
+        self.maxLabel = maxLabel
+    }
+}
+
 var imageCollectionList: [WeatherListCollectionData] = [
     .init(image: "list", label1: "나의 위치",label2: "서울특별시", label3: "흐림", label4: "21°",label5: "최저:15° 최저:15°" )
     ,.init(image: "list", label1: "의정부시",label2: "의정부시", label3: "흐림", label4: "21°",label5: "최저:15° 최저:15°" )
@@ -60,4 +76,12 @@ var weatherInfoCollectionList: [WeatherInfoListCollectionData] = [
     .init(image: "sun.max.fill", label1: "10시", label2: "20°"),
     .init(image: "sun.max.fill", label1: "10시", label2: "20°"),
     .init(image: "sun.max.fill", label1: "10시", label2: "20°")
+]
+
+
+var itemListData: [ItemListData] = [
+    
+    .init(dayLabel: "오늘", image: "sun.max.fill", minLabel: "15", rangeImage: "rangeImage", maxLabel: "20"),
+                                    .init(dayLabel: "월", image: "sun.max", minLabel: "15", rangeImage: "rangeImage", maxLabel: "20"),
+                                    .init(dayLabel: "화", image: "sun.max.fill", minLabel: "15", rangeImage: "rangeImage", maxLabel: "20")
 ]

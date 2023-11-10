@@ -18,10 +18,15 @@ class DetailViewController: UIViewController {
         self.setLayout()
         setCollectionViewConfig()
         setCollectionViewLayout()
+        self.setTableViewConfig()
         
-                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(image4Tapped))
-                        image4View.addGestureRecognizer(tapGesture)
-                        image4View.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(image4Tapped))
+        image4View.addGestureRecognizer(tapGesture)
+        image4View.isUserInteractionEnabled = true
+        
+        tableView.estimatedRowHeight = 55 // 예상되는 셀 높이
+        tableView.rowHeight = UITableView.automaticDimension // 동적으로 셀 높이 설정
+
     }
     
     @objc func image4Tapped() {
@@ -36,14 +41,23 @@ class DetailViewController: UIViewController {
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .clear
     }
+    private let tableView = UITableView(frame: .zero, style: .plain).then {
+        $0.backgroundColor = .init(red: 0.175, green: 0.201, blue: 0.249, alpha: 1)
+        $0.separatorColor = .lightGray
+        $0.separatorStyle = .singleLine
+    }
     
     
     private func setLayout() {
         self.view.addSubview(scrollView)
+        self.view.addSubview(tableView)
         scrollView.addSubview(contentView)
         
         scrollView.backgroundColor = .clear
         contentView.backgroundColor = .clear
+        tableView.backgroundColor = .clear
+        tableView.layer.cornerRadius = 15
+        
         
         scrollView.snp.makeConstraints {
             //$0.edges.equalToSuperview()
@@ -60,7 +74,7 @@ class DetailViewController: UIViewController {
             $0.height.equalTo(1000)
         }
         
-        [firstStackView, secondStackView, strokeView2,image4View, image3View].forEach{
+        [firstStackView, secondStackView,tableView ,strokeView2,image4View, image3View].forEach{
             contentView.addSubview($0)
         }
         
@@ -100,6 +114,13 @@ class DetailViewController: UIViewController {
             //$0.bottom.equalToSuperview().inset(20)
         }
         
+        tableView.snp.makeConstraints{
+            $0.top.equalTo(secondStackView.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(200)
+            
+        }
+        
         strokeView2.snp.makeConstraints{
             $0.height.equalTo(0.2)
             $0.leading.trailing.equalToSuperview()
@@ -136,6 +157,13 @@ class DetailViewController: UIViewController {
                                      forCellWithReuseIdentifier: DetailCollectionViewCell.identifier)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+    }
+    
+    private func setTableViewConfig() {
+        self.tableView.register(ItemListTableViewCell.self,
+                                forCellReuseIdentifier: ItemListTableViewCell.identifier)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 }
 
@@ -291,4 +319,21 @@ extension DetailViewController: UICollectionViewDataSource {
         item.bindData2(data: weatherInfoCollectionList[indexPath.row], row: indexPath.row)
         return item
     }
+}
+
+
+extension DetailViewController: UITableViewDelegate {}
+extension DetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemListData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemListTableViewCell.identifier,
+                                                       for: indexPath) as? ItemListTableViewCell else {return UITableViewCell()}
+        
+        cell.bindData3(data: itemListData[indexPath.row])
+        return cell
+    }
+    
 }
