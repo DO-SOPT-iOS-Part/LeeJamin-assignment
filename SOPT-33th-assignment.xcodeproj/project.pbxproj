@@ -11,6 +11,7 @@
 		ED56A2BC2AEFD5D3005FE6AF /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56A2BB2AEFD5D3005FE6AF /* DummyData.swift */; };
 		ED56A2CA2AF3B49D005FE6AF /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56A2C92AF3B49D005FE6AF /* DetailCollectionViewCell.swift */; };
 		ED56A2CE2AFCA1F5005FE6AF /* ItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56A2CD2AFCA1F5005FE6AF /* ItemListTableViewCell.swift */; };
+		ED56A2E52B038A93005FE6AF /* WeatherInfoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56A2E42B038A93005FE6AF /* WeatherInfoDataModel.swift */; };
 		ED5FF68C2AE19C0A00DE3B12 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED5FF6872AE19C0900DE3B12 /* SF-Pro-Display-Light.otf */; };
 		ED5FF68E2AE19C0A00DE3B12 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED5FF6892AE19C0A00DE3B12 /* SF-Pro-Display-Regular.otf */; };
 		ED5FF68F2AE19C0A00DE3B12 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED5FF68A2AE19C0A00DE3B12 /* SF-Pro-Display-Medium.otf */; };
@@ -46,6 +47,7 @@
 		ED56A2BB2AEFD5D3005FE6AF /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		ED56A2C92AF3B49D005FE6AF /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED56A2CD2AFCA1F5005FE6AF /* ItemListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewCell.swift; sourceTree = "<group>"; };
+		ED56A2E42B038A93005FE6AF /* WeatherInfoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoDataModel.swift; sourceTree = "<group>"; };
 		ED5FF6872AE19C0900DE3B12 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Light.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		ED5FF6882AE19C0A00DE3B12 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Thin.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		ED5FF6892AE19C0A00DE3B12 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				ED56A2B92AEFD094005FE6AF /* WeatherListCollectionViewCell.swift */,
 				ED56A2BB2AEFD5D3005FE6AF /* DummyData.swift */,
 				ED56A2CD2AFCA1F5005FE6AF /* ItemListTableViewCell.swift */,
+				ED56A2E42B038A93005FE6AF /* WeatherInfoDataModel.swift */,
 			);
 			path = "SOPT-33th-assignment";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED56A2E52B038A93005FE6AF /* WeatherInfoDataModel.swift in Sources */,
 				ED56A2BC2AEFD5D3005FE6AF /* DummyData.swift in Sources */,
 				EDAD4A272ADFBFED000FDFDA /* DetailViewController.swift in Sources */,
 				ED5FF6D12AE82CB100DE3B12 /* ListImageView.swift in Sources */,
