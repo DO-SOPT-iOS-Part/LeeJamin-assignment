@@ -119,12 +119,14 @@ class WeatherListCollectionViewCell: UICollectionViewCell {
     func bindData(data: WeatherListCollectionData,
                   row: Int) {
         self.backgroundImageView.image = UIImage(named: data.image)
-        self.label1.text = data.label1
-        self.label2.text = data.label2
-        self.label3.text = data.label3
-        self.label4.text = data.label4
-        self.label5.text = data.label5
+        self.label1.text = data.name
+        self.label2.text = data.time
+        self.label3.text = data.description
+        self.label4.text = data.temp
+        self.label5.text = data.minMax
         
     }
+    
+    
 
 }

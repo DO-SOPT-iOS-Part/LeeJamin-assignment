@@ -8,6 +8,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         print("FirstView")
         self.navigationItem.title = "날씨"
+        let cities = ["seoul", "sokcho", "suwon", "suncheon", "ulsan"]
         let ellipsisButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), style: .plain, target: self, action: #selector(ellipsisButtonTapped))
         navigationItem.rightBarButtonItem = ellipsisButton
         
@@ -42,7 +43,9 @@ class FirstViewController: UIViewController {
         setLayout()
         setCollectionViewConfig()
         setCollectionViewLayout()
+        fetchDataForCities(cities)
         
+        //let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=292c10e9de665e1a093ee05c1a988e11"
     }
     
     private let scrollView = UIScrollView()
@@ -96,7 +99,53 @@ class FirstViewController: UIViewController {
     }
     
     
+    private func fetchDataForCities(_ cities: [String]){
+        for city in cities {
+            GetWeatherService.shared.fetchData(for:city){result in
+                switch result{
+                case .success(let weatherInsfo):
+                    let weatherListData = self.convertWeatherInfoToImageList(weatherInsfo)
+                    imageCollectionList.append(weatherListData)
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
+
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
     
+    private func convertWeatherInfoToImageList(_ weatherInfo: WeatherInfoDataModel) -> WeatherListCollectionData{
+        let name = translateCityNameToKorean(name: weatherInfo.name)
+        let time = makeTimeZoneToTime(timeZone: weatherInfo.timezone)
+        let temp = Int(weatherInfo.main.temp.rounded())
+        let tempMin = Int(weatherInfo.main.tempMin.rounded())
+        let tempMax = Int(weatherInfo.main.tempMax.rounded())
+        return WeatherListCollectionData(image: "list", name: name, time: time, description: weatherInfo.weather.first?.description ?? "", temp: "\(temp)°", minMax: "최저:\(tempMin)° 최고:\(tempMax)°"
+        )
+    }
+    
+    private func makeTimeZoneToTime(timeZone: Int) -> String {
+        let today = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: timeZone)
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: today)
+        
+    }
+    
+    private func translateCityNameToKorean(name: String) -> String {
+        let translations: [String: String] = [
+            "Seoul": "서울",
+            "Sokcho": "속초",
+            "Suwon-si": "수원",
+            "Suncheon": "순천",
+            "Ulsan": "울산"
+        ]
+        return translations[name] ?? name
+    }
 }
 
 extension FirstViewController: UICollectionViewDelegate {
@@ -106,16 +155,17 @@ extension FirstViewController: UICollectionViewDelegate {
 }
 extension FirstViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(imageCollectionList.count)
         return imageCollectionList.count
-        
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let item = collectionView.dequeueReusableCell(withReuseIdentifier: WeatherListCollectionViewCell.identifier,
-                                                            for: indexPath) as? WeatherListCollectionViewCell else {return UICollectionViewCell()}
-        //item.delegate = self
-        item.bindData(data: imageCollectionList[indexPath.row], row: indexPath.row)
+                                                            for: indexPath) as? WeatherListCollectionViewCell else { return UICollectionViewCell() }
+
+        
+        let weatherData = imageCollectionList[indexPath.row]
+        item.bindData(data: weatherData, row: indexPath.row)
+
         return item
     }
 }

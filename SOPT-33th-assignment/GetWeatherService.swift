@@ -13,7 +13,7 @@ class GetWeatherService{
     
     func fetchData(for city:String, completion: @escaping(Result<WeatherInfoDataModel,Error>) -> Void){
         let apiKey = "292c10e9de665e1a093ee05c1a988e11"
-        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&lang=kr&appid=\(apiKey)"
+        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&units=metric&lang=kr&appid=\(apiKey)"
         
         guard let url = URL(string: urlString) else {
             completion(.failure(NetworkError.invalidURL))
